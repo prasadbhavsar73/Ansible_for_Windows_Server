@@ -1,0 +1,19 @@
+- hosts: winhost
+  gather_facts: no
+  tasks:
+  - name: Copy the bundle.zip
+    win_copy:
+      src: install_powerdb_9.9.1_14JAN13.zip
+      dest: C:\\Temp\\
+
+  - name: Extract the bundle
+    win_unzip:
+      src: c:\\Temp\\install_powerdb_9.9.1_14JAN13.zip
+      dest: C:\\Temp\\Power-DB
+
+  - name: Install PowerDB
+    win_package:
+      path: C:\\Temp\\Power-DB\\install_powerdb_9.9.1_14JAN13.exe
+      wait: yes
+      state: present
+      product_id: '{A6F9E15D-8B90-4321-8432-FE562BB328E8}'
