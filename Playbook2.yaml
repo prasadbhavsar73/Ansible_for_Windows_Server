@@ -16,4 +16,4 @@
       path: C:\\Temp\\Power-DB\\install_powerdb_9.9.1_14JAN13.exe
       wait: yes
       state: present
-      product_id: '{A6F9E15D-8B90-4321-8432-FE562BB328E8}'
+      product_id: '{PRODUCT_ID}'
